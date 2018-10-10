@@ -1,0 +1,240 @@
+@font-face {
+  font-family: 'SpaceGrotesk';
+  src: url('assets/fonts/SpaceGrotesk-Light.woff2') format('woff2'),
+       url('assets/fonts/SpaceGrotesk-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SpaceGrotesk';
+  src: url('assets/fonts/SpaceGrotesk-Regular.woff2') format('woff2'),
+       url('assets/fonts/SpaceGrotesk-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SpaceGrotesk';
+  src: url('assets/fonts/SpaceGrotesk-Medium.woff2') format('woff2'),
+       url('assets/fonts/SpaceGrotesk-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SpaceGrotesk';
+  src: url('assets/fonts/SpaceGrotesk-Bold.woff2') format('woff2'),
+       url('assets/fonts/SpaceGrotesk-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SpaceGrotesk';
+  src: url('assets/fonts/SpaceGrotesk-SemiBold.woff2') format('woff2'),
+       url('assets/fonts/SpaceGrotesk-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+body, input {
+  font-family: 'SpaceGrotesk';
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+}
+
+body, html, main, #app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.top > header {
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin-top: 0px;
+}
+
+.top > caption {
+  margin-top: 20px;
+  max-width: 300px;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+.settings, .encoder-progress {
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px 20px;
+  /* border: 1px solid hsl(0, 0%, 90%); */
+  box-shadow: 0px 2px 12px -2px rgba(0, 0, 0, 0.15);
+}
+
+.encoder-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.encoder {
+  display: flex;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.settings-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  height: 60px;
+
+  padding-top: 0px;
+  padding-bottom: 0px;
+  border-bottom: 1px solid hsl(0, 0%, 95%);
+}
+.settings-row:first-child {
+  padding-top: 0;
+}
+.settings-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.settings-row > label {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  min-width: 100px;
+  text-align: left;
+  /* border-right: 1px solid hsl(0, 0%, 90%); */
+  padding: 0px;
+  padding-right: 20px;
+  font-weight: 500;
+  /* background: hsl(0, 0%, 97%); */
+}
+.settings-row:hover {
+  /* background: hsl(0, 0%, 95%); */
+}
+
+.settings-cell {
+  font-weight: 300;
+  width: 100%;
+  min-width: 100px;
+  padding: 0px;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.fps-picker, .fps-defaults,
+.fps-defaults > div, .size-picker,
+.encoder-progress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.fps-defaults {
+  
+  margin-left: 0px;
+}
+.fps-defaults > div {
+  margin-left: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  background: hsl(0, 0%, 90%);
+  color: hsl(0, 0%, 45%);
+  border-radius: 5px;
+  padding: 5px;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  line-height: 60px;
+}
+.fps-defaults > div:hover {
+  background: hsl(0, 0%, 85%);
+}
+
+.size-separator {
+  margin: 10px;
+}
+
+input {
+  min-width: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  outline: 0;
+  padding: 0px;
+}
+
+input[type='range'] {
+  cursor: pointer;
+}
+
+input[type='number'] {
+  width: initial;
+  width: 90px;
+  padding: 5px 10px;
+}
+
+.slider {
+  display: flex;
+  flex-direction: row;
+}
+
+.quality-label {
+  display: flex;
+  min-width: 30px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+.quality-info {
+  font-size: 12px;
+  margin-top: 10px;
+  opacity: 0.5;
+}
+
+.encoder-progress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.encoder-progress > header {
+  margin-bottom: 10px;
+}
+
+.canvas-container {
+  width: 100%;
+}
+.canvas-container > canvas {
+  width: 100%;
+  height: auto;
+}

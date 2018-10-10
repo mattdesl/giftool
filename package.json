@@ -1,0 +1,57 @@
+{
+  "name": "giftool",
+  "version": "1.0.0",
+  "description": "A website to encode a GIF from image frames",
+  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Matt DesLauriers",
+    "email": "dave.des@gmail.com",
+    "url": "https://github.com/mattdesl"
+  },
+  "dependencies": {
+    "drag-drop": "^4.2.0",
+    "gif-encoder": "^0.7.1",
+    "javascript-natural-sort": "^0.7.1",
+    "load-img": "^1.0.0",
+    "map-limit": "0.0.1",
+    "preact": "^8.3.1",
+    "stream-buffers": "^3.0.2"
+  },
+  "devDependencies": {
+    "bubleify": "^1.2.0",
+    "canvas-sketch-cli": "^1.0.19",
+    "surge": "^0.20.1"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "bubleify",
+        {
+          "objectAssign": "Object.assign"
+        }
+      ]
+    ]
+  },
+  "scripts": {
+    "upload": "surge -p public -d giftool.surge.sh",
+    "deploy": "npm run build && npm run upload",
+    "start": "canvas-sketch src/index.js --dir public --html src/index.html",
+    "build": "canvas-sketch src/index.js --dir public --html src/index.html --build"
+  },
+  "keywords": [
+    "gif",
+    "make",
+    "png",
+    "frames",
+    "video"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mattdesl/giftool.git"
+  },
+  "homepage": "https://github.com/mattdesl/giftool",
+  "bugs": {
+    "url": "https://github.com/mattdesl/giftool/issues"
+  }
+}
